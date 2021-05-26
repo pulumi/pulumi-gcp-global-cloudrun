@@ -17,11 +17,16 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-xyz/pkg/provider"
-	"github.com/pulumi/pulumi-xyz/pkg/version"
+	_ "embed"
+
+	"github.com/stack72/pulumi-globalgcpcloudrun/pkg/provider"
+	"github.com/stack72/pulumi-globalgcpcloudrun/pkg/version"
 )
 
-var providerName = "xyz"
+var providerName = "globalgcpcloudrun"
+
+//go:embed schema.json
+var pulumiSchema []byte
 
 func main() {
 	provider.Serve(providerName, version.Version, pulumiSchema)

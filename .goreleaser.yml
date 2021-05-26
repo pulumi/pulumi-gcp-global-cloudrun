@@ -1,0 +1,29 @@
+archives:
+  - id: archive
+    name_template: '{{ .Binary }}-{{ .Tag }}-{{ .Os }}-{{ .Arch }}'
+artifactories:
+  - name: stack72
+    mode: archive
+    target: "https://stack72.jfrog.io/artifactory/pulumi-packages/{{ .ProjectName }}/"
+    username: goreleaser
+builds:
+  - binary: pulumi-resource-globalgcpcloudrun
+    dir: provider
+    env:
+      - CGO_ENABLED=0
+    goarch:
+      - amd64
+    goos:
+      - darwin
+      - windows
+      - linux
+    ldflags:
+      - -X github.com/stack72/pulumi-globalgcpcloudrun/provider/pkg/version.Version={{.Tag }}
+    main: ./cmd/pulumi-resource-globalgcpcloudrun/
+changelog:
+  skip: true
+release:
+  disable: false
+  prerelease: auto
+snapshot:
+  name_template: '{{ .Tag }}-SNAPSHOT'

@@ -1,11 +1,11 @@
 {
-    "name": "@pulumi/xyz",
+    "name": "@stack72/pulumi-globalgcpcloudrun",
     "version": "${VERSION}",
     "scripts": {
         "build": "tsc"
     },
     "dependencies": {
-        "@pulumi/aws": "^4.0.0"
+        "@pulumi/gcp": "^5.0.0"
     },
     "devDependencies": {
         "typescript": "^3.7.0"
