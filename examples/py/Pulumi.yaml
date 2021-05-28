@@ -1,0 +1,3 @@
+name: deployment-py
+runtime: python
+description: A Python deployment for GCP Global Cloud Run

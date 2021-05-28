@@ -1,0 +1,2 @@
+pulumi>=3.0.0,<4.0.0
+stack72_pulumi_globalgcpcloudrun=<1.0.0
