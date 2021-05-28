@@ -163,6 +163,7 @@ jobs:
           access: "public"
           token: ${{ secrets.NPM_TOKEN }}
           package: ${{github.workspace}}/sdk/nodejs/bin/package.json
+          tag: dev
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
