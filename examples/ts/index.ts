@@ -8,7 +8,7 @@ const deployment = new globalcloudrun.Deployment("my-sample-deployment", {
     projectId: project,
 
     imageName: "gcr.io/ahmetb-public/zoneprinter",
-    serviceName: "demo-service"
+    serviceName: "demo-service-ts"
 });
 
 export const ip = deployment.ipAddress;
