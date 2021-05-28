@@ -1,0 +1,3 @@
+name: deployment-go
+runtime: go
+description: A Go deployment for GCP Global Cloud Run

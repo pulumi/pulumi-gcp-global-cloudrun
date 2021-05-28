@@ -29,7 +29,7 @@ task install
 Before you begin, you'll need to install the latest version of the Pulumi Plugin using `pulumi plugin install`:
 
 ```
-pulumi plugin install resource globalgcpcloudrun 0.0.1- --server https://stack72.jfrog.io/artifactory/pulumi-packages/pulumi-globalgcpcloudrun
+pulumi plugin install resource globalgcpcloudrun v0.0.1 --server https://stack72.jfrog.io/artifactory/pulumi-packages/pulumi-globalgcpcloudrun
 ```
 
 This installs the plugin into `~/.pulumi/plugins`.
