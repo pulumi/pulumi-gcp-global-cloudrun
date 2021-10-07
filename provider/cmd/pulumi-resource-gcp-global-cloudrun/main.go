@@ -19,11 +19,11 @@ package main
 import (
 	_ "embed"
 
-	"github.com/stack72/pulumi-globalgcpcloudrun/pkg/provider"
-	"github.com/stack72/pulumi-globalgcpcloudrun/pkg/version"
+	"github.com/pulumi/pulumi-gcp-global-cloudrun/provider/pkg/provider"
+	"github.com/pulumi/pulumi-gcp-global-cloudrun/provider/pkg/version"
 )
 
-var providerName = "globalgcpcloudrun"
+var providerName = "gcp-global-cloudrun"
 
 //go:embed schema.json
 var pulumiSchema []byte

@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 export class Deployment extends pulumi.ComponentResource {
     /** @internal */
-    public static readonly __pulumiType = 'globalgcpcloudrun:index:deployment';
+    public static readonly __pulumiType = 'gcp-global-cloudrun:index:Deployment';
 
     /**
      * Returns true if the given object is an instance of Deployment.  This is designed to work even
@@ -65,13 +65,13 @@ export interface DeploymentArgs {
     /**
      * The name of the image to deploy to cloudrun
      */
-    readonly imageName: pulumi.Input<string>;
+    imageName: pulumi.Input<string>;
     /**
      * The project in which to create the cloudrun resources
      */
-    readonly projectId: string;
+    projectId: string;
     /**
      * The name of the cloudrun service
      */
-    readonly serviceName: string;
+    serviceName: string;
 }

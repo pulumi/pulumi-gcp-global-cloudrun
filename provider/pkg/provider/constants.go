@@ -1,3 +1,3 @@
 package provider
 
-const GCPCloudRunGlobalToken = "globalgcpcloudrun:index:deployment"
+const GCPCloudRunGlobalToken = "gcp-global-cloudrun:index:Deployment"

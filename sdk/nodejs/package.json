@@ -1,5 +1,5 @@
 {
-    "name": "@stack72/pulumi-globalgcpcloudrun",
+    "name": "@pulumi/gcp-global-cloudrun",
     "version": "${VERSION}",
     "scripts": {
         "build": "tsc"

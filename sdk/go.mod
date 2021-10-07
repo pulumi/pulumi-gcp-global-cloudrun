@@ -1,4 +1,4 @@
-module github.com/stack72/pulumi-globalgcpcloudrun/sdk
+module github.com/pulumi/pulumi-gcp-global-cloudrun/sdk
 
 go 1.16
 

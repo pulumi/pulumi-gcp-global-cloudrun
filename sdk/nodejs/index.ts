@@ -15,21 +15,21 @@ const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "globalgcpcloudrun:index:deployment":
+            case "gcp-global-cloudrun:index:Deployment":
                 return new Deployment(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("globalgcpcloudrun", "index", _module)
+pulumi.runtime.registerResourceModule("gcp-global-cloudrun", "index", _module)
 
 import { Provider } from "./provider";
 
-pulumi.runtime.registerResourcePackage("globalgcpcloudrun", {
+pulumi.runtime.registerResourcePackage("gcp-global-cloudrun", {
     version: utilities.getVersion(),
     constructProvider: (name: string, type: string, urn: string): pulumi.ProviderResource => {
-        if (type !== "pulumi:providers:globalgcpcloudrun") {
+        if (type !== "pulumi:providers:gcp-global-cloudrun") {
             throw new Error(`unknown provider type ${type}`);
         }
         return new Provider(name, <any>undefined, { urn });

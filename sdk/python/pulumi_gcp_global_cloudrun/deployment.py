@@ -131,7 +131,7 @@ class Deployment(pulumi.ComponentResource):
             __props__.__dict__["service_name"] = service_name
             __props__.__dict__["ip_address"] = None
         super(Deployment, __self__).__init__(
-            'globalgcpcloudrun:index:deployment',
+            'gcp-global-cloudrun:index:Deployment',
             resource_name,
             __props__,
             opts,
