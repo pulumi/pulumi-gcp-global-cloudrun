@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-	cloudrun "github.com/stack72/pulumi-globalgcpcloudrun/sdk/go/globalgcpcloudrun"
+	cloudrun "github.com/pulumi/pulumi-gcp-global-cloudrun/sdk/go/gcp"
 )
 
 func main() {

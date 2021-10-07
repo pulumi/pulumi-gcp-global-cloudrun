@@ -11,11 +11,11 @@ _utilities.register(
     resource_modules="""
 [
  {
-  "pkg": "globalgcpcloudrun",
+  "pkg": "gcp-global-cloudrun",
   "mod": "index",
-  "fqn": "pulumi_globalgcpcloudrun",
+  "fqn": "pulumi_gcp_global_cloudrun",
   "classes": {
-   "globalgcpcloudrun:index:deployment": "Deployment"
+   "gcp-global-cloudrun:index:Deployment": "Deployment"
   }
  }
 ]
@@ -23,9 +23,9 @@ _utilities.register(
     resource_packages="""
 [
  {
-  "pkg": "globalgcpcloudrun",
-  "token": "pulumi:providers:globalgcpcloudrun",
-  "fqn": "pulumi_globalgcpcloudrun",
+  "pkg": "gcp-global-cloudrun",
+  "token": "pulumi:providers:gcp-global-cloudrun",
+  "fqn": "pulumi_gcp_global_cloudrun",
   "class": "Provider"
  }
 ]

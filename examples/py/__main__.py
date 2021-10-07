@@ -1,7 +1,7 @@
 """A Python Pulumi program"""
 
 import pulumi
-import stack72_pulumi_globalgcpcloudrun as cloudrun
+import pulumi_gcp_global_cloudrun as cloudrun
 
 config = pulumi.Config()
 project = config.require("project")

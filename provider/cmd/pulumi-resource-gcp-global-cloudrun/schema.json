@@ -1,12 +1,13 @@
 {
-  "name": "globalgcpcloudrun",
+  "name": "gcp-global-cloudrun",
   "resources": {
-    "globalgcpcloudrun:index:deployment": {
+    "gcp-global-cloudrun:index:Deployment": {
       "isComponent": true,
       "inputProperties": {
         "projectId": {
           "type": "string",
-          "description": "The project in which to create the cloudrun resources"
+          "description": "The project in which to create the cloudrun resources",
+          "plain": true
         },
         "imageName": {
           "type": "string",
@@ -14,16 +15,13 @@
         },
         "serviceName": {
           "type": "string",
-          "description": "The name of the cloudrun service"
+          "description": "The name of the cloudrun service",
+          "plain": true
         }
       },
       "requiredInputs": [
         "projectId",
         "imageName",
-        "serviceName"
-      ],
-      "plainInputs": [
-        "projectId",
         "serviceName"
       ],
       "properties": {
@@ -42,11 +40,14 @@
       "packageReferences": {
         "Pulumi": "3.*",
         "Pulumi.Gcp": "5.*"
+      },
+      "namespaces": {
+        "gcp-global-cloudrun": "GcpGlobalCloudRun"
       }
     },
     "go": {
       "generateResourceContainerTypes": true,
-      "importBasePath": "github.com/stack72/pulumi-globalgcpcloudrun/sdk/go/globalgcpcloudrun"
+      "importBasePath": "github.com/pulumi/pulumi-gcp-global-cloudrun/sdk/go/gcp"
     },
     "nodejs": {
       "dependencies": {
@@ -54,11 +55,9 @@
       },
       "devDependencies": {
         "typescript": "^3.7.0"
-      },
-      "packageName": "@stack72/pulumi-globalgcpcloudrun"
+      }
     },
     "python": {
-      "packageName": "stack72_pulumi_globalgcpcloudrun",
       "requires": {
         "pulumi": ">=3.0.0,<4.0.0",
         "pulumi-gcp": ">=5.0.0,<6.0.0"

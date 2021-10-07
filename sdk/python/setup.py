@@ -8,31 +8,37 @@ from setuptools.command.install import install
 from subprocess import check_call
 
 
+VERSION = "0.0.0"
+PLUGIN_VERSION = "0.0.0"
+
 class InstallPluginCommand(install):
     def run(self):
         install.run(self)
         try:
-            check_call(['pulumi', 'plugin', 'install', 'resource', 'globalgcpcloudrun', '${PLUGIN_VERSION}'])
+            check_call(['pulumi', 'plugin', 'install', 'resource', 'gcp-global-cloudrun', PLUGIN_VERSION])
         except OSError as error:
             if error.errno == errno.ENOENT:
-                print("""
-                There was an error installing the globalgcpcloudrun resource provider plugin.
+                print(f"""
+                There was an error installing the gcp-global-cloudrun resource provider plugin.
                 It looks like `pulumi` is not installed on your system.
                 Please visit https://pulumi.com/ to install the Pulumi CLI.
                 You may try manually installing the plugin by running
-                `pulumi plugin install resource globalgcpcloudrun ${PLUGIN_VERSION}`
+                `pulumi plugin install resource gcp-global-cloudrun {PLUGIN_VERSION}`
                 """)
             else:
                 raise
 
 
 def readme():
-    with open('README.md', encoding='utf-8') as f:
-        return f.read()
+    try:
+        with open('README.md', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        return "gcp-global-cloudrun Pulumi Package - Development Version"
 
 
-setup(name='pulumi_globalgcpcloudrun',
-      version='${VERSION}',
+setup(name='pulumi_gcp_global_cloudrun',
+      version=VERSION,
       long_description=readme(),
       long_description_content_type='text/markdown',
       cmdclass={
@@ -40,7 +46,7 @@ setup(name='pulumi_globalgcpcloudrun',
       },
       packages=find_packages(),
       package_data={
-          'pulumi_globalgcpcloudrun': [
+          'pulumi_gcp_global_cloudrun': [
               'py.typed',
           ]
       },

@@ -7,9 +7,9 @@ using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
 
-namespace Pulumi.Globalgcpcloudrun
+namespace Pulumi.GcpGlobalCloudRun
 {
-    [GlobalgcpcloudrunResourceType("globalgcpcloudrun:index:deployment")]
+    [GcpGlobalCloudRunResourceType("gcp-global-cloudrun:index:Deployment")]
     public partial class Deployment : Pulumi.ComponentResource
     {
         /// <summary>
@@ -27,7 +27,7 @@ namespace Pulumi.Globalgcpcloudrun
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
         public Deployment(string name, DeploymentArgs args, ComponentResourceOptions? options = null)
-            : base("globalgcpcloudrun:index:deployment", name, args ?? new DeploymentArgs(), MakeResourceOptions(options, ""), remote: true)
+            : base("gcp-global-cloudrun:index:Deployment", name, args ?? new DeploymentArgs(), MakeResourceOptions(options, ""), remote: true)
         {
         }
 

@@ -6,7 +6,7 @@ using System.IO;
 using System.Reflection;
 using Pulumi;
 
-namespace Pulumi.Globalgcpcloudrun
+namespace Pulumi.GcpGlobalCloudRun
 {
     static class Utilities
     {
@@ -66,7 +66,7 @@ namespace Pulumi.Globalgcpcloudrun
         static Utilities()
         {
             var assembly = typeof(Utilities).GetTypeInfo().Assembly;
-            using var stream = assembly.GetManifestResourceStream("Pulumi.Globalgcpcloudrun.version.txt");
+            using var stream = assembly.GetManifestResourceStream("Pulumi.GcpGlobalCloudRun.version.txt");
             using var reader = new StreamReader(stream ?? throw new NotSupportedException("Missing embedded version.txt file"));
             version = reader.ReadToEnd().Trim();
             var parts = version.Split("\n");
@@ -78,9 +78,9 @@ namespace Pulumi.Globalgcpcloudrun
         }
     }
 
-    internal sealed class GlobalgcpcloudrunResourceTypeAttribute : Pulumi.ResourceTypeAttribute
+    internal sealed class GcpGlobalCloudRunResourceTypeAttribute : Pulumi.ResourceTypeAttribute
     {
-        public GlobalgcpcloudrunResourceTypeAttribute(string type) : base(type, Utilities.Version)
+        public GcpGlobalCloudRunResourceTypeAttribute(string type) : base(type, Utilities.Version)
         {
         }
     }
