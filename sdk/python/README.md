@@ -12,54 +12,32 @@ It's written in Go, but thanks to Pulumi's multi language SDK generating capabil
 
 ## Building from source
 
-But if you need to build it yourself, just download this repository, [install](https://taskfile.dev/#/installation) [Task](https://taskfile.dev/):
+But if you need to build it yourself, run the following command to build and install the plugin in the correct folder (resolved automatically based on the current Operating System):
 
 ```sh
-go get github.com/go-task/task/v3/cmd/task
+make install
 ```
-
-And run the following command to build and install the plugin in the correct folder (resolved automatically based on the current Operating System):
-
-```sh
-task install
-```
-
-## Install Plugin Binary
-
-Before you begin, you'll need to install the latest version of the Pulumi Plugin using `pulumi plugin install`:
-
-```
-pulumi plugin install resource globalgcpcloudrun v0.0.1 --server https://stack72.jfrog.io/artifactory/pulumi-packages/pulumi-globalgcpcloudrun
-```
-
-This installs the plugin into `~/.pulumi/plugins`.
 
 ## Install your chosen SDK
 
-Next, you need to install your desired language SDK using your languages package manager.
+You need to install your desired language SDK using your languages package manager.
 
 ### Python
 
 ```
-pip3 install stack72-pulumi-globalgcpcloudrun
+pip3 install pulumi_gcp_global_cloudrun
 ```
 
 ### NodeJS
 
 ```
-npm install @stack72/pulumi-globalgcpcloudrun
-```
-
-### DotNet
-
-```
-Coming Soon
+npm install @pulumi/gcp-global-cloudrun
 ```
 
 ### Go
 
 ```
-go get -t github.com/stack72/pulumi-globalgcpcloudrun/sdk/go/globalgcpcloudrun
+go get -t github.com/pulumi/pulumi-gcp-global-cloudrun/sdk
 ```
 
 # Usage
